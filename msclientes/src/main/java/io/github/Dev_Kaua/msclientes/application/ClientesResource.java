@@ -17,7 +17,7 @@ public class ClientesResource {
 
     @GetMapping
     public String status(){
-        return "Ok";
+        return "chupe minhas bolas";
     }
 
     @PostMapping

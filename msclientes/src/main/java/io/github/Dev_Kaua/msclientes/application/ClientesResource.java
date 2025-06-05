@@ -2,6 +2,7 @@ package io.github.Dev_Kaua.msclientes.application;
 
 import io.github.Dev_Kaua.msclientes.application.representation.ClienteSaveRequest;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -11,13 +12,15 @@ import java.net.URI;
 @RestController
 @RequestMapping("clientes")
 @RequiredArgsConstructor
+@Slf4j
 public class ClientesResource {
 
     private final ClienteService service;
 
     @GetMapping
     public String status(){
-        return "chupe minhas bolas";
+        log.info("Obtendo o status do microservice de clientes");
+        return "entrou 100%";
     }
 
     @PostMapping
@@ -37,8 +40,8 @@ public class ClientesResource {
         var cliente = service.getByCpf(cpf);
         if(cliente.isEmpty()){
             return ResponseEntity.notFound().build();
-        }else{
-            return ResponseEntity.ok(cliente);
         }
+        return ResponseEntity.ok(cliente);
+
     }
 }

@@ -8,10 +8,14 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-      - id: msclientes_route
-        uri: lb://msclientes
-        predicates:
-          - Path=/clientes/**
+        - id: msclientes_route
+          uri: lb://msclientes
+          predicates:
+            - Path=/clientes/**
+        - id: mscartoes_route
+          uri: lb://mscartoes
+          predicates:
+            - Path=/cartoes/**
 
 server:
   port: 8080

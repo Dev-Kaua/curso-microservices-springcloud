@@ -12,7 +12,7 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column
+    @Column(unique = true)
     private String cpf;
     @Column
     private String nome;

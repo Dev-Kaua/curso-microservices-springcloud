@@ -8,12 +8,14 @@ import io.github.Dev_Kaua.mscartoes.domain.DadosSolicitacaoEmissaoCartao;
 import io.github.Dev_Kaua.mscartoes.infra.repository.CartaoRepository;
 import io.github.Dev_Kaua.mscartoes.infra.repository.ClienteCartaoRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
+@Slf4j
 public class EmissaoCartaoSubscriber {
 
     private final CartaoRepository cartaoRepository;
@@ -24,7 +26,7 @@ public class EmissaoCartaoSubscriber {
         try {
             var mapper = new ObjectMapper();
             DadosSolicitacaoEmissaoCartao dados = mapper.readValue(payload, DadosSolicitacaoEmissaoCartao.class);
-            Cartao cartao = cartaoRepository.findById(dados.getIdCartao()).orElseThrow();
+            Cartao cartao = cartaoRepository.findById(dados.getIdCartao()). orElseThrow();
             ClienteCartao clienteCartao = new ClienteCartao();
             clienteCartao.setCartao(cartao);
             clienteCartao.setCpf(dados.getCpf());
@@ -33,7 +35,7 @@ public class EmissaoCartaoSubscriber {
             clienteCartaoRepository.save(clienteCartao);
 
         }catch(Exception e){
-            e.printStackTrace();
+            log.error("Erro ao receber solicitação de emissão de cartão: {}", e.getMessage());
         }
     }
 }

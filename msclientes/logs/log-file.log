@@ -1,0 +1,20 @@
+2025-07-05T10:21:25.225-03:00  WARN 1636 --- [msclientes] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14h20m46s642ms67µs600ns).
+2025-07-05T10:22:00.686-03:00  INFO 1636 --- [msclientes] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-05T10:27:00.693-03:00  INFO 1636 --- [msclientes] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-05T10:32:00.705-03:00  INFO 1636 --- [msclientes] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-05T10:37:00.712-03:00  INFO 1636 --- [msclientes] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-05T10:42:00.728-03:00  INFO 1636 --- [msclientes] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-05T10:42:20.046-03:00  INFO 1636 --- [msclientes] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSCLIENTES with eureka with status DOWN
+2025-07-05T10:42:20.047-03:00  INFO 1636 --- [msclientes] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1751722940047, current=DOWN, previous=UP]
+2025-07-05T10:42:20.047-03:00  INFO 1636 --- [msclientes] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCLIENTES/${spring.application-name}:ce0867c2a7a9f35a2b30e3d3ca6cc708: registering service...
+2025-07-05T10:42:20.068-03:00  INFO 1636 --- [msclientes] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-05T10:42:20.091-03:00  INFO 1636 --- [msclientes] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-05T10:42:20.112-03:00  INFO 1636 --- [msclientes] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-05T10:42:20.141-03:00  INFO 1636 --- [msclientes] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCLIENTES/${spring.application-name}:ce0867c2a7a9f35a2b30e3d3ca6cc708 - registration status: 204
+2025-07-05T10:42:20.151-03:00  WARN 1636 --- [msclientes] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-07-05T10:42:20.152-03:00  INFO 1636 --- [msclientes] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-05T10:42:20.157-03:00  INFO 1636 --- [msclientes] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-05T10:42:20.158-03:00  INFO 1636 --- [msclientes] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-05T10:42:23.163-03:00  INFO 1636 --- [msclientes] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-07-05T10:42:23.257-03:00  INFO 1636 --- [msclientes] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSCLIENTES/${spring.application-name}:ce0867c2a7a9f35a2b30e3d3ca6cc708 - deregister  status: 200
+2025-07-05T10:42:23.258-03:00  INFO 1636 --- [msclientes] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

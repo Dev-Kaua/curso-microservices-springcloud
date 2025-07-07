@@ -1,0 +1,14 @@
+2025-07-05T10:25:11.015-03:00  INFO 23756 --- [msavaliadorcredito] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-05T10:30:11.049-03:00  INFO 23756 --- [msavaliadorcredito] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-05T10:35:11.065-03:00  INFO 23756 --- [msavaliadorcredito] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-05T10:40:11.080-03:00  INFO 23756 --- [msavaliadorcredito] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-05T10:42:04.228-03:00  INFO 23756 --- [msavaliadorcredito] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSAVALIADORCREDITO with eureka with status DOWN
+2025-07-05T10:42:04.228-03:00  INFO 23756 --- [msavaliadorcredito] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1751722924228, current=DOWN, previous=UP]
+2025-07-05T10:42:04.228-03:00  INFO 23756 --- [msavaliadorcredito] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/${spring.application-name}:41f9ce688431aa68528f71d239552a4a: registering service...
+2025-07-05T10:42:04.235-03:00  INFO 23756 --- [msavaliadorcredito] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-05T10:42:04.251-03:00  INFO 23756 --- [msavaliadorcredito] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-05T10:42:04.295-03:00  INFO 23756 --- [msavaliadorcredito] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-05T10:42:04.347-03:00  INFO 23756 --- [msavaliadorcredito] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/${spring.application-name}:41f9ce688431aa68528f71d239552a4a - registration status: 204
+2025-07-05T10:42:04.347-03:00  INFO 23756 --- [msavaliadorcredito] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-07-05T10:42:04.473-03:00  INFO 23756 --- [msavaliadorcredito] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/${spring.application-name}:41f9ce688431aa68528f71d239552a4a - deregister  status: 200
+2025-07-05T10:42:04.473-03:00  INFO 23756 --- [msavaliadorcredito] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

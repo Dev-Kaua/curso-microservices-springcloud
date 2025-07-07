@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: msclientes
+
+server:
+  port: 0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://cursoms-eureka-user:senhasegura@${EUREKA_SERVER}:8761/eureka
+  instance:
+    # hostname: localhost -> removido para funcionar via dockerização
+    prefer-ip-address: true
+    instance-id: ${spring.application-name}:${spring.application.instance_id:${random.value}}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  file:
+    name: ./logs/log-file.log

@@ -12,7 +12,7 @@ ARG EUREKA_SERVER=localhost
 ARG KEYCLOAK_SERVER=localhost
 ARG KEYCLOAK_PORT=8081
 
-ENTRYPOINT java -jar app.jar
+ENTRYPOINT java -jar -Dspring.profiles.active=production app.jar
 #deve-se criar o network para que os microsserviços consigam se conectar via docker
 # -> o network é criado via comando -> docker network create nome-do-network
 #Além disso, deve-se inserir o nome do container dos serviços ao invés de localhost
